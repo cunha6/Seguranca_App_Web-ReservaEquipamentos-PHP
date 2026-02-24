@@ -16,11 +16,11 @@ function enviaEmail($nome, $email, $assunto, $mensagem) {
 		 $mail->CharSet = 'UTF-8';
 		 $mail->Host = "smtp.gmail.com"; // Servidor SMTP
 		 $mail->SMTPSecure = "tls"; // conexão segura com TLS
-		 $mail->Port = 587; 
+		 $mail->Port = porta; 
 		 $mail->SMTPAuth = true; // Caso o servidor SMTP precise de autenticação
-		 $mail->Username = "secondlifeestgipp@gmail.com"; // SMTP username
-		 $mail->Password = "uibe caka bvcu wyid"; // SMTP password
-		 $mail->From = "secondlifeestgipp@gmail.com"; // From
+		 $mail->Username = "email"; // SMTP username
+		 $mail->Password = "password"; // SMTP password
+		 $mail->From = "email"; // From
 		 $mail->FromName = "SecondLife" ; // Nome de quem envia o email
 		 $mail->AddAddress($email, $nome); // Email e nome de quem receberá 
 		 $mail->WordWrap = 50; // Definir quebra de linha
@@ -38,5 +38,6 @@ function enviaEmail($nome, $email, $assunto, $mensagem) {
 		}
 
 }
+
 
 ?>
